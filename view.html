@@ -1,63 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enrollment Summary - Giovani Catering School</title>
-
-    <style>
-        .display-box {
-            max-width: 500px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #f7f7f7;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            font-size: 18px;
-        }
-        .display-box p strong {
-            color: #333;
-        }
-        .btn-back {
-            display: block;
-            margin: 20px auto;
-            background: rgb(128, 0, 0);
-            padding: 12px 20px;
-            color: #fff;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
-            width: 200px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>View Enrollments - Giovani Catering School</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
-    <h2 style="text-align:center;margin-top:40px;">Enrollment Details</h2>
-
-    <div class="display-box" id="outputArea">
-        <!-- Data loads here -->
+  <header class="site-header">
+    <div class="container header-grid">
+      <h1 class="site-title">Submissions</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="enroll.html">Enroll</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <a href="index.html" class="btn-back">Back to Home</a>
+  <main class="container">
+    <h2>Saved Enrollment Submissions</h2>
+    <div id="listArea">Loading...</div>
+  </main>
 
-<script>
-    // Load and display stored enrollment data
-    const savedData = JSON.parse(localStorage.getItem("giovaniForm"));
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year3"></span> Giovani Catering School.</p>
+    </div>
+  </footer>
 
-    const output = document.getElementById("outputArea");
-
-    if (savedData) {
-        output.innerHTML = `
-            <p><strong>Name:</strong> ${savedData.name}</p>
-            <p><strong>Email:</strong> ${savedData.email}</p>
-            <p><strong>Course Selected:</strong> ${savedData.course}</p>
-            <p><strong>Message:</strong> ${savedData.message}</p>
-        `;
-    } else {
-        output.innerHTML = "<p>No enrollment data found.</p>";
-    }
-</script>
-
+  <script src="scripts/script.js"></script>
 </body>
 </html>

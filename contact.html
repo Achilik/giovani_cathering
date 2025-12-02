@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giovani Catering School - Master the Culinary Arts</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Giovani Catering School</title>
+    <link rel="stylesheet" href="styles/contact.css" />
 </head>
 <body>
 
+    <!-- Header -->
     <header class="main-header">
         <div class="container">
             <h1>Giovani Catering School</h1>
@@ -15,71 +16,88 @@
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="index.html">Our Courses</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html#courses">Our Courses</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
             <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
         </div>
     </header>
 
-    <section id="contact" class="contact-section">
+    <!-- Hero Section -->
+    <section class="contact-hero">
         <div class="container">
-            <h3>Get in Touch & Enroll Now!</h3>
-            <form id="contactForm" class="contact-form">
-
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="course">Interested Course</label>
-                    <select id="course" name="course" required>
-                        <option value="">-- Select a Course --</option>
-                        <option value="Professional Pastry Chef">Professional Pastry Chef</option>
-                        <option value="International Cuisine Mastery">International Cuisine Mastery</option>
-                        <option value="Food Styling & Plating">Food Styling & Plating</option>
-                        <option value="Catering Business & Management">Catering Business & Management</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Your Message / Questions</label>
-                    <textarea id="message" name="message" rows="5"></textarea>
-                </div>
-                
-                <button type="submit" class="btn contact-btn">Send Inquiry</button>
-            </form>
+            <h2>Contact Us</h2>
+            <p>Have questions? We're here to help you begin your culinary journey.</p>
         </div>
     </section>
 
+    <section class="contact-wrapper">
+        <div class="container contact-grid">
+
+            <!-- Contact Details -->
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Reach out to us for inquiries about courses, enrollment, or general information.</p>
+
+                <ul class="info-list">
+                    <li><strong>Address:</strong><br> 21 Culinary Drive, Food District, Lagos</li>
+                    <li><strong>Email:</strong><br> info@giovanicateringschool.com</li>
+                    <li><strong>Phone:</strong><br> +234 800 222 4455</li>
+                    <li><strong>Office Hours:</strong><br> Mon–Sat: 8:00am – 6:00pm</li>
+                </ul>
+            </div>
+
+            <!-- Form -->
+            <div class="contact-form-card">
+                <h3>Send Us a Message</h3>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn contact-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Giovani Catering School. | Excellence in Culinary Arts.</p>
+            <p>&copy; 2025 Giovani Catering School | Culinary Excellence & Gastronomy</p>
         </div>
     </footer>
 
     <script>
-        // Save data to localStorage
         document.getElementById("contactForm").addEventListener("submit", function(e) {
             e.preventDefault();
 
-            const data = {
+            const contactData = {
                 name: document.getElementById("name").value,
                 email: document.getElementById("email").value,
-                course: document.getElementById("course").value,
-                message: document.getElementById("message").value
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value,
             };
 
-            localStorage.setItem("giovaniForm", JSON.stringify(data));
-
-            // Redirect to view page
+            localStorage.setItem("giovaniContactData", JSON.stringify(contactData));
             window.location.href = "view.html";
         });
     </script>

@@ -1,76 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giovani Catering School - Master the Culinary Arts</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giovani Catering School - Master the Culinary Arts</title>
+  <meta name="description" content="Giovani Catering School: professional culinary courses including pastry, international cuisine, food styling and catering business management.">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <h1 class="site-title">Giovani Catering School</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="enroll.html">Enroll</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <header class="main-header">
-        <div class="container">
-            <h1>Giovani Catering School</h1>
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#menu">Our Courses</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-        </div>
-    </header>
-
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h2>The Art of Fine Dining Starts Here.</h2>
-            <p>Enroll today and transform your passion for food into a professional career.</p>
-            <a href="#contact" class="btn">Get Started</a>
-        </div>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h2>The Art of Fine Dining Starts Here</h2>
+        <p>Enroll today and transform your passion for food into a professional career.</p>
+        <a class="btn" href="enroll.html">Get Started</a>
+      </div>
     </section>
 
-    <section id="menu" class="menu-section">
-        <div class="container">
-            <h3>Our Culinary Specialties & Courses</h3>
-            <div class="food-grid">
-                
-                <div class="food-card">
-                    <img src="images/images.jpg" alt="Image of Giovani Pastries">
-                    <h4>Professional Pastry Chef</h4>
-                    <p>Learn French baking, artisan breads, and detailed dessert plating techniques.</p>
-                </div>
-                
-                <div class="food-card">
-                    <img src="images/images1.jpg" alt="Image of International Cuisine">
-                    <h4>International Cuisine Mastery</h4>
-                    <p>A deep dive into Italian, Asian, and Mediterranean cooking styles and ingredients.</p>
-                </div>
-                
-                <div class="food-card">
-                    <img src="images/images2.jpg" alt="Image of Elegant Food Presentation">
-                    <h4>Food Styling & Plating</h4>
-                    <p>Master the visual art of food, essential for catering and high-end restaurant service.</p>
-                </div>
+    <section id="courses" class="courses container">
+      <h2>Our Culinary Specialties &amp; Courses</h2>
+      <div class="grid">
 
-                <div class="food-card">
-                    <img src="images/images3.jpg" alt="Image of a Catering Setup">
-                    <h4>Catering Business & Management</h4>
-                    <p>From planning large events to inventory and staff management – the business side of food.</p>
-                </div>
+        <article class="card">
+          <img loading="lazy" src="images/images.jpg" alt="Giovani pastries on display">
+          <h3>Professional Pastry Chef</h3>
+          <p>Learn French baking, artisan breads, and detailed dessert plating techniques.</p>
+        </article>
 
-            </div>
-        </div>
+        <article class="card">
+          <img loading="lazy" src="images/images1.jpg" alt="International cuisine cooking demo">
+          <h3>International Cuisine Mastery</h3>
+          <p>A deep dive into Italian, Asian, and Mediterranean cooking styles and ingredients.</p>
+        </article>
+
+        <article class="card">
+          <img loading="lazy" src="images/images2.jpg" alt="Food styling and plating example">
+          <h3>Food Styling &amp; Plating</h3>
+          <p>Master the visual art of food — essential for catering and high-end restaurant service.</p>
+        </article>
+
+        <article class="card">
+          <img loading="lazy" src="images/images3.jpg" alt="A catering setup at an event">
+          <h3>Catering Business &amp; Management</h3>
+          <p>From planning large events to inventory and staff management — the business side of food.</p>
+        </article>
+
+      </div>
     </section>
-    
 
-    <footer>
+  </main>
+
+  <footer>
         <div class="container">
-            <p>&copy; 2025 Giovani Catering School. | Excellence in Culinary Arts.</p>
+            <p>&copy; 2025 Giovani Catering School | Culinary Excellence & Gastronomy</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enroll - Giovani Catering School</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <h1 class="site-title">Giovani Catering School</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="enroll.html">Enroll</a></li>
+          <li><a href="view.html">View Submissions</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Enrollment Form</h2>
+    <form id="enrollForm" class="form" novalidate>
+
+      <label for="fullName">Full name</label>
+      <input id="fullName" name="fullName" type="text" required minlength="2" />
+
+      <label for="email">Email address</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="phone">Phone (optional)</label>
+      <input id="phone" name="phone" type="tel" />
+
+      <label for="courseSelect">Select course</label>
+      <select id="courseSelect" name="courseSelect" required>
+        <option value="">-- Choose a course --</option>
+        <option value="pastry">Professional Pastry Chef</option>
+        <option value="international">International Cuisine Mastery</option>
+        <option value="styling">Food Styling &amp; Plating</option>
+        <option value="business">Catering Business &amp; Management</option>
+      </select>
+
+      <fieldset>
+        <legend>How did you hear about us?</legend>
+        <label><input type="checkbox" name="referral" value="friend"> Friend</label>
+        <label><input type="checkbox" name="referral" value="social"> Social Media</label>
+        <label><input type="checkbox" name="referral" value="ad"> Advertisement</label>
+      </fieldset>
+
+      <label for="message">Message (optional)</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Submit Enrollment</button>
+        <a class="btn btn-secondary" href="view.html">View Saved Submissions</a>
+      </div>
+
+    </form>
+  </main>
+
+   <footer>
+        <div class="container">
+            <p>&copy; 2025 Giovani Catering School | Culinary Excellence & Gastronomy</p>
+        </div>
+    </footer>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
+```
