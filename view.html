@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enrollment Summary - Giovani Catering School</title>
-    <link rel="stylesheet" href="style.css">
 
     <style>
         .display-box {
@@ -42,41 +41,23 @@
 
     <a href="index.html" class="btn-back">Back to Home</a>
 
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-    (function() {
-        emailjs.init("achilikes@gmail.com");  // <-- Paste your EmailJS public key
-    })();
+    // Load and display stored enrollment data
+    const savedData = JSON.parse(localStorage.getItem("giovaniForm"));
 
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-        e.preventDefault();
+    const output = document.getElementById("outputArea");
 
-        const data = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            course: document.getElementById("course").value,
-            message: document.getElementById("message").value
-        };
-
-        // Save locally for view.html
-        localStorage.setItem("giovaniForm", JSON.stringify(data));
-
-        // Send email using EmailJS
-        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-            name: data.name,
-            email: data.email,
-            course: data.course,
-            message: data.message
-        })
-        .then(function() {
-            alert("Message sent successfully!");
-            window.location.href = "view.html"; // Go to view page
-        }, function(error) {
-            alert("Error sending email: " + JSON.stringify(error));
-        });
-    });
+    if (savedData) {
+        output.innerHTML = `
+            <p><strong>Name:</strong> ${savedData.name}</p>
+            <p><strong>Email:</strong> ${savedData.email}</p>
+            <p><strong>Course Selected:</strong> ${savedData.course}</p>
+            <p><strong>Message:</strong> ${savedData.message}</p>
+        `;
+    } else {
+        output.innerHTML = "<p>No enrollment data found.</p>";
+    }
 </script>
-
 
 </body>
 </html>
